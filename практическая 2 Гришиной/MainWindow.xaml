@@ -1,0 +1,27 @@
+﻿<Window x:Class="практическая_2_Гришиной.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:практическая_2_Гришиной"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Menu" Width="49" Click="MenuItem_Click">
+                <MenuItem Header="Выход" Click="Exit_Click"></MenuItem>
+                <MenuItem Header="О программе" ToolTip ="Гришиной Наталии ИСП-31"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Label Content="Ввести n целых чисел(&gt;0 или &lt;0). Найти произведение чисел. Результат вывести на экран" Margin="117,34,90,360"/>
+        <Label Content="Диапазон" HorizontalAlignment="Left" Margin="117,94,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="range" HorizontalAlignment="Left" Margin="90,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177" Height="22" TextChanged="range_TextChanged"/>
+        <Label Content="Кол-во колон" HorizontalAlignment="Left" Margin="317,94,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="columns" HorizontalAlignment="Left" Margin="290,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="177" Height="22"/>
+        <Label Content="Произведение" HorizontalAlignment="Left" Margin="524,94,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="com1" HorizontalAlignment="Left" Margin="497,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" Height="22" TextChanged="com1_TextChanged"/>
+        <DataGrid x:Name="mas1" ColumnWidth="45" CanUserAddRows="False" Margin="107,200,0,0" Height="109" VerticalAlignment="Top" HorizontalAlignment="Left" Width="327" SelectionChanged="mas_SelectionChanged"/>
+        <Button Content="заполнить" HorizontalAlignment="Left" Margin="489,200,0,0" VerticalAlignment="Top" Height="54" Width="175" Click="Fill_Click_"/>
+        <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="490,259,0,0" VerticalAlignment="Top" Width="174" Height="50" Click="Calculate_Click"/>
+    </Grid>
+</Window>
